@@ -1,0 +1,295 @@
+/* start shop*/
+.container .pagetitles{
+    margin-bottom: 24px;
+  }
+  .productshop{
+    display: flex;
+    gap: 20px;
+    padding: 0 100px;
+    margin-bottom: 150px;
+  }
+  .products-filters{
+    width:295px ;
+    height: 1220px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px 24px;
+  }
+  @media (max-width:800px) {
+    .productshop{
+      display: flex;
+      gap: 20px;
+      padding: 0 16px;
+      margin-bottom: 150px;
+    }
+    .products-filters{
+      display: none;
+      width:295px ;
+      height: 1220px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      padding: 20px 24px;
+    }
+  }
+  .products-filters img{
+    cursor: pointer;
+  }
+  .products-filters .filters-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px 0;
+  }
+  .products-filters .filters-head.main{
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
+  }
+  hr{
+    padding-top: 1px;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  .type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  .type:hover{
+    background: rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .type p{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.6px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  .range-slider {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .range-slider  span > input {
+    border: none;
+    outline: none;
+    background: none;
+    color: rgba(0, 0, 0, 1);
+    min-width: 14px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.9px;
+  }
+  .range {
+    width: 100%;
+    display: grid;
+    position: relative;
+    z-index: 5;
+  }
+  .range input {
+    grid-row: 2;
+    grid-column: 1;
+    pointer-events: none;
+    appearance: none;
+    background: transparent;
+  }
+  
+  .range input::-webkit-slider-thumb {
+    pointer-events: auto;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .slider {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background: rgba(240, 240, 240, 1);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .progress {
+    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+  }
+  .option input[type=radio] {
+    display: none;
+  }
+  .option label {
+    position: relative;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+    border: solid 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 0 7px 0 0;
+    font-size: 0;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .option label.green {
+    background: rgba(0, 193, 43, 1);
+  }
+  .option label.red{
+    background: rgba(245, 6, 6, 1);
+  
+  }
+  .option label.yellow {
+    background: rgba(245, 221, 6, 1);
+  }
+  .option label.orange {
+    background: rgba(245, 121, 6, 1);
+  }
+  .option label.whiteblue {
+    background: rgba(6, 202, 245, 1);
+  }
+  .option label.blue {
+    background: rgba(6, 58, 245, 1);
+  }
+  .option label.purple {
+    background: rgba(125, 6, 245, 1);
+  }
+  .option label.pink {
+    background: rgba(245, 6, 164, 1);
+  }
+  .option label.white {
+    background: rgba(255, 255, 255, 1);
+  }
+  .option label.black {
+    background: rgba(0, 0, 0, 1);
+  }
+  .option input[type=radio]:checked + label.green:after {
+    border: solid 2px rgba(0, 193, 43, 1);
+  }
+  .option input[type=radio]:checked + label.red:after {
+    border: solid 2px rgba(245, 6, 6, 1);
+  }
+  .option input[type=radio]:checked + label.yellow:after {
+    border: solid 2px rgba(245, 221, 6, 1);
+  }
+  .option input[type=radio]:checked + label.orange:after {
+    border: solid 2px rgba(245, 121, 6, 1);
+  }
+  .option input[type=radio]:checked + label.whiteblue:after {
+    border: solid 2px rgba(6, 202, 245, 1);
+  }
+  .option input[type=radio]:checked + label.blue:after {
+    border: solid 2px rgba(6, 58, 245, 1);
+  }
+  .option input[type=radio]:checked + label.purple:after {
+    border: solid 2px rgba(125, 6, 245, 1);
+  }
+  .option input[type=radio]:checked + label.pink:after {
+    border: solid 2px rgba(245, 6, 164, 1);
+  }
+  .option input[type=radio]:checked + label.white:after {
+    border: solid 2px rgba(0, 0, 0, .1);
+  }
+  .option input[type=radio]:checked + label.black:after {
+    border: solid 2px rgba(0, 0, 0, 1);
+  }
+  .option input[type=radio]:checked + label:after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: -99;
+  }
+  
+  .filterbysize .sizes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 0px;
+  }
+  .filterbysize .sizes .size{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+    padding: 10px 20px;
+  }
+  .filterbysize .sizes .size:hover{
+    background: rgba(0, 0, 0, 1);
+    color: white;
+  }
+  .filter-btn{
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    margin: 0;
+    margin-top: 10px;
+    transition: all 0.5s;
+  }
+  .filter-btn:hover{
+    background: rgba(0, 0, 0, 0.8);
+    transform: translatex(3px);
+  }
+  .hide{
+    display: none;
+  }
+  .allproducts{
+  
+    width: 925px;
+  }
+  .allproducts .new-products{
+    width: 100%;
+    max-height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition:all 0.3s;
+    padding: 0 5px;
+    gap: 15px;
+  }
+  .shopproductshead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  select{
+    border: none;
+    outline: 0;
+    background: none;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+  }
+  select option{
+  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+  }
+  .showingtitle{
+  
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--text-color);
+  
+  }
+  /* end shop*/
