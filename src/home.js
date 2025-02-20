@@ -8,7 +8,7 @@ import { cart } from './pagescomponents/cart/cart';
 
 
 
-
+/*pull*/
 
 export const home = () => {
   const home = document.createElement('home');
